@@ -1,0 +1,55 @@
+[{
+    "classes": [
+      {
+        "image": "https://i.ibb.co/3B7zkrr/class1.jpg",
+        "instructorImage": "https://i.ibb.co/Tgq56CX/teacher.jpg",
+        "name": "Football",
+        "instructor": "John Smith",
+        "students": 30,
+        "price": 100
+      },
+      {
+        "image": "https://i.ibb.co/3B7zkrr/class1.jpg",
+        "instructorImage": "https://i.ibb.co/Tgq56CX/teacher.jpg",
+        "name": "Basketball",
+        "instructor": "Sarah Johnson",
+        "students": 55,
+        "price": 80
+      },
+      {
+        "image": "https://i.ibb.co/3B7zkrr/class1.jpg",
+        "instructorImage": "https://i.ibb.co/Tgq56CX/teacher.jpg",
+        "name": "Tennis",
+        "instructor": "Michael Davis",
+        "students": 35,
+        "price": 90
+      },
+     
+      {
+        "image": "https://i.ibb.co/3B7zkrr/class1.jpg",
+        "instructorImage": "https://i.ibb.co/Tgq56CX/teacher.jpg",
+        "name": "Golf",
+        "instructor": "Daniel Brown",
+        "students": 40,
+        "price": 150
+      },
+    
+      {
+        "image": "https://i.ibb.co/3B7zkrr/class1.jpg",
+        "instructorImage": "https://i.ibb.co/Tgq56CX/teacher.jpg",
+        "name": "Cricket",
+        "instructor": "Sophia Miller",
+        "students": 25,
+        "price": 80
+      },
+      {
+        "image": "https://i.ibb.co/3B7zkrr/class1.jpg",
+        "instructorImage": "https://i.ibb.co/Tgq56CX/teacher.jpg",
+        "name": "Volleyball",
+        "instructor": "David Anderson",
+        "students": 60,
+        "price": 90
+      }
+    ]
+  }]
+  

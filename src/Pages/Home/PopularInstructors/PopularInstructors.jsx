@@ -1,32 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
-import ClassCard from './ClassCard';
+import InstructorCard from './InstructorCard';
 
-
-const PopularClasses = () => {
-
-    const [ClassData, setClassData] = useState([]);
+const PopularInstructors = () => {
+    const [InstructorData, setInstructorData] = useState([]);
 
     useEffect(() => {
         fetch('class.json')
             .then(res => res.json())
 
-            .then(data => (data?.map(newData=>setClassData(newData))));
+            .then(data => (data?.map(newData=>setInstructorData(newData))));
     }, [])
-      console.log(ClassData);
+      console.log(InstructorData);
       
     return (
         <section>
         <SectionTitle 
         subHeading={"The School"}
-        heading={"Popular Classes"}
+        heading={"Popular Instructor"}
         ></SectionTitle>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
           {
-                   ClassData?.classes?.map(Class => <ClassCard
+                   InstructorData?.classes?.map(Class => <InstructorCard
                     Class={Class}
-                   ></ClassCard>)
+                   ></InstructorCard>)
                 }
          </div>
         
@@ -34,4 +32,4 @@ const PopularClasses = () => {
     );
 };
 
-export default PopularClasses;
+export default PopularInstructors;
