@@ -13,7 +13,7 @@ const PopularClasses = () => {
 
             .then(data => (data?.map(newData=>setClassData(newData))));
     }, [])
-      console.log(ClassData);
+    
       
     return (
         <section>

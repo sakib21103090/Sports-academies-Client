@@ -11,7 +11,7 @@ const PopularInstructors = () => {
 
             .then(data => (data?.map(newData=>setInstructorData(newData))));
     }, [])
-      console.log(InstructorData);
+      
       
     return (
         <section>

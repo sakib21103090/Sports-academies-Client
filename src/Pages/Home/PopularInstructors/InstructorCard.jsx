@@ -1,10 +1,10 @@
 import React from 'react';
 
 const InstructorCard = ({Class}) => {
-    console.log(Class)
+    
     const { students, instructor, name,instructorImage } =Class;
     return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
     <figure><img className='w-[400px]' src={instructorImage} alt="" /></figure>
     <div className="card-body">
       <p className="card-title"> Instructor Name : {instructor}</p>
