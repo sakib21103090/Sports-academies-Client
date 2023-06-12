@@ -13,12 +13,18 @@ const GoogleSign = () => {
         googleSignIn()
         .then(result=>{
             const user=result.user;
-            Swal.fire('Hey', 'Login successful', 'success');
-             navigate(from,{replace :true});
-            
-          })
-          .catch(error=>{
-            console.log(error.message)
+            const saveUser = { name: user.displayName, email: user.email }
+            fetch('http://localhost:5000/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
+            })
+                .then(res => res.json())
+                .then(() => {
+                    navigate(from, { replace: true });
+                })
           })
         }
     

@@ -1,15 +1,17 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { AuthContext } from '../../../Components/Providers/AuthProviders';
 import { useForm } from 'react-hook-form';
 import './Background.css';
+import GoogleSign from '../../Shared/GoogleSign/GoogleSign';
 
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, profileUpdate } = useContext(AuthContext);
+    const navigate = useNavigate();
    
     const HandelRegister = data => {
 
@@ -32,20 +34,32 @@ const SignUp = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             profileUpdate(data.name,photoURL)
-                .then(() => {
-                    console.log('user profile info updated')
-                    reset();
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'User created successfully.',
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    navigate('/');
-
+            .then(() => {
+                const saveUser = { name: data.name, email: data.email }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
                 })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            reset();
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'User created successfully.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            navigate('/');
+                        }
+                })
+                
                 .catch(error => console.log(error))
+        })
         })
     })
 };
@@ -54,8 +68,8 @@ const SignUp = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="w-1/2 mr-12">
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-1xl bg-s-100">
-                        <form onSubmit={handleSubmit(HandelRegister)} className="card-body rounded mt-6 bg-blue-900 z-10 bg-opacity-30">
+                    <div className="card bg-blue-900 z-10 bg-opacity-30 flex-shrink-0 w-full max-w-sm shadow-1xl bg-s-100">
+                        <form onSubmit={handleSubmit(HandelRegister)} className="card-body rounded mt-6 ">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text  font-bold text-black">Name</span>
@@ -96,11 +110,14 @@ const SignUp = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <input className="btn bg-blue-600 text-black" type="submit" value="Sign Up" />
                             </div>
-                            <p className='my-4 text-center font-bold text-black'>Already have an account<Link className='text-green-300 font-bold' to="/login">Login</Link> </p>
+                            <p className='my-4 text-center font-bold text-black'>Already have an account<Link className='text-green-300 font-bold' to="/login">Login</Link> </p> 
+                            
                         </form>
-                        
+                        <div>
+                            <GoogleSign></GoogleSign>
+                        </div>
                     </div>
                 </div>
             </div>

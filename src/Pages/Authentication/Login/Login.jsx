@@ -29,9 +29,10 @@ const Login = () => {
       .then(result => {
       
           const LoggedUser = result.user;
+          Swal.fire('Hey', 'login successful', 'success');
           console.log(LoggedUser);
           
-          Swal.fire('Hey', 'login successful', 'success');
+          
           setError('')
           form.reset();
           navigate(from,{replace :true});
