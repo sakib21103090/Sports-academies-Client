@@ -41,7 +41,7 @@ const Navbar = () => {
             <li><NavLink className='text-white  font-bold' to="/instructors">Instructors</NavLink> </li>
             <li><NavLink className='text-white  font-bold' to="/classes">Classes</NavLink> </li>
            
-           {user&& <li><NavLink className='text-white font-bold' to="/dashboard/selectedClass">Dashboard</NavLink> </li>}
+           {user&& <li><NavLink className='text-white font-bold' to="/dashboard/userHome">Dashboard</NavLink> </li>}
          
          
           </ul>

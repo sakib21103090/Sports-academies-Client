@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Components/Providers/AuthProviders';
-import Swal from 'sweetalert2';
 const GoogleSign = () => {
     const { googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
