@@ -9,7 +9,7 @@ const ManageUsers = () => {
     })
     return (
         <div>
-            {/* {users.length} */}
+            {users.length}
            
         </div>
     );
