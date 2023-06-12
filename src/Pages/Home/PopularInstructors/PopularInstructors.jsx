@@ -4,14 +4,15 @@ import InstructorCard from './InstructorCard';
 
 const PopularInstructors = () => {
     const [InstructorData, setInstructorData] = useState([]);
-
     useEffect(() => {
-        fetch('class.json')
+        fetch('http://localhost:5000/class')
             .then(res => res.json())
 
-            .then(data => (data?.map(newData=>setInstructorData(newData))));
+            .then((data) => {
+                console.log(data);
+                setInstructorData(data);
+              });
     }, [])
-      
       
     return (
         <section>
@@ -20,10 +21,11 @@ const PopularInstructors = () => {
         heading={"Popular Instructor"}
         ></SectionTitle>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  m-4 gap-4 ">
           {
-                   InstructorData?.classes?.map(Class => <InstructorCard
-                    Class={Class}
+                   InstructorData?.map(instructor => <InstructorCard
+                    key={instructor._id}
+                    instructor={instructor}
                    ></InstructorCard>)
                 }
          </div>

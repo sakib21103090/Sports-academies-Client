@@ -8,10 +8,13 @@ const PopularClasses = () => {
     const [ClassData, setClassData] = useState([]);
 
     useEffect(() => {
-        fetch('class.json')
+        fetch('http://localhost:5000/class')
             .then(res => res.json())
 
-            .then(data => (data?.map(newData=>setClassData(newData))));
+            .then((data) => {
+                console.log(data);
+                setClassData(data);
+              });
     }, [])
     
       
@@ -22,12 +25,13 @@ const PopularClasses = () => {
         heading={"Popular Classes"}
         ></SectionTitle>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {
-                   ClassData?.classes?.map(Class => <ClassCard
-                    Class={Class}
-                   ></ClassCard>)
-                }
+                 ClassData?.map(Class => <ClassCard
+                    key={Class._id}
+                  Class={Class}
+                 ></ClassCard>)
+              }
          </div>
         
         </section>

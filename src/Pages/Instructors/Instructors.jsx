@@ -20,11 +20,11 @@ const Instructors = () => {
         heading={" Instructors"}
         ></SectionTitle>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-4 gap-4">
         {
                  instructorsData?.map(instructor => <LoadDataIns
-                    key={Class._id}
-                  Class={Class}
+                    key={instructor._id}
+                    instructor={instructor}
                  ></LoadDataIns>)
               }
        </div>
