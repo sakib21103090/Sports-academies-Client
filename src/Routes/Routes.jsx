@@ -14,12 +14,13 @@ import Error from "../Components/Error/Error";
 import SelectedClass from "../Pages/Dashboard/StudentsDasboard/SelectedClass";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import EnrolledClasses from "../Pages/Dashboard/StudentsDasboard/EnrolledClasses";
-import HomeStudent from "../Pages/Dashboard/StudentsDasboard/HomeStudent";
 import AdminHome from "../Pages/Dashboard/AdminDasboard/AdminHome";
 import ManageClasses from "../Pages/Dashboard/AdminDasboard/ManageClasses";
-import ManageUsers from "../Pages/Dashboard/AdminDasboard/ManageUsers";
 import AddClass from "../Pages/Dashboard/InstructorsDasboard/AddClass";
 import MyClasses from "../Pages/Dashboard/InstructorsDasboard/MyClasses";
+import AdminRoutes from "./AdminRoutes";
+import ManageUsers from "../Pages/Dashboard/AdminDasboard/ManageUsers";
+
 
 
   export const router = createBrowserRouter([
@@ -66,29 +67,23 @@ import MyClasses from "../Pages/Dashboard/InstructorsDasboard/MyClasses";
             path : 'enrolledClasses',
             element : <EnrolledClasses></EnrolledClasses>
           },
-          {
-            path : 'userHome',
-            element : <HomeStudent></HomeStudent>
-          },
+          
 
           //  admin routes
           {
             path : 'adminHome',
-            element : <AdminHome></AdminHome>
+            element : <AdminRoutes><AdminHome></AdminHome></AdminRoutes>
           },
           {
             path : 'manageClasses',
-            element : <ManageClasses></ManageClasses>
+            element : <AdminRoutes><ManageClasses></ManageClasses></AdminRoutes>
           },
           {
             path : 'manageUsers',
-            element : <ManageUsers></ManageUsers>
+            element : <AdminRoutes><ManageUsers></ManageUsers></AdminRoutes>
           },
           // instructors routes
-          {
-            path : 'instructorHome',
-            element : <AdminHome></AdminHome>
-          },
+          
           {
             path : 'addClass',
             element : <AddClass></AddClass>

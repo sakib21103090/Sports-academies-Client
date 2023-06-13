@@ -12,7 +12,7 @@ const PopularClasses = () => {
             .then(res => res.json())
 
             .then((data) => {
-                console.log(data);
+                
                 setClassData(data);
               });
     }, [])
