@@ -23,7 +23,7 @@ const Classes = () => {
         heading={" Classes"}
         ></SectionTitle>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-4 gap-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4 gap-4 ">
         {
                  classesData?.map(Class => <AllCardClass
                     key={Class._id}
