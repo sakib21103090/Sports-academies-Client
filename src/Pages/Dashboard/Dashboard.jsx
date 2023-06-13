@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBook, FaHome, FaMoneyBill } from 'react-icons/fa';
+import { FaBook, FaHome, FaMoneyBill, FaUser } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -27,7 +27,7 @@ const Dashboard = () => {
 
          <li className='mb-6'><NavLink to="/dashboard/manageClasses"><FaBook></FaBook> Manage Classes</NavLink> </li>
 
-        <li><NavLink to="/dashboard/manageUsers"><FaMoneyBill></FaMoneyBill>Manage Users</NavLink> </li>
+        <li><NavLink to="/dashboard/manageUsers"><FaUser></FaUser>Manage Users</NavLink> </li>
 
   </> :
    isInstructor?<> 
