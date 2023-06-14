@@ -15,7 +15,7 @@ const AllCardClass = ({Class}) => {
       console.log(item);
       if(user && user.email){
           const cartItem = {className, classImage,availableSeats, price, email: user.email}
-          fetch('http://localhost:5000/carts', {
+          fetch('https://sport-academy-server.vercel.app/carts', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'

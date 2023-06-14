@@ -5,7 +5,7 @@ import InstructorCard from './InstructorCard';
 const PopularInstructors = () => {
     const [InstructorData, setInstructorData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/instructor')
+        fetch('https://sport-academy-server.vercel.app/instructor')
             .then(res => res.json())
 
             .then((data) => {
