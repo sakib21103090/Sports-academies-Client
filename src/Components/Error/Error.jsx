@@ -12,7 +12,7 @@ const Error = () => {
             classNames="fade"
             timeout={1000}
           >
-            <h1 className="text-4xl font-bold text-red-500 mt-8 animate-bounce">
+            <h1 className="text-4xl font-bold text-sky-900 mt-8 animate-bounce">
                 ------------------------------------------ <br />
               -----------404 - Page Not Found------ <br />
               ------------------------------------------
@@ -28,7 +28,7 @@ const Error = () => {
             <p className="mt-4  mb-4 text-black text-center animate-fade">
               Oops! The page you are looking for does not exist. <br />
               Please check the URL or return to the homepage. <br />
-              <h4 className='m-6'><Link to="/" className="bg-rose-500 text-white px-4 py-2 rounded-md">
+              <h4 className='m-6'><Link to="/" className="bg-sky-500 text-white px-4 py-2 rounded-md">
         Go Back to Home
       </Link></h4>
               
@@ -45,7 +45,7 @@ const Error = () => {
             timeout={1000}
           >
             <img
-              src={`https://i.ibb.co/4KPrhYP/404-page.png`} 
+              src={`https://i.ibb.co/LxybD55/A-40ion.jpg`} 
               alt="404 Animation"
               className="mt-8 animate-bounce rounded"
             />

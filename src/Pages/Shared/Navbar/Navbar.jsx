@@ -41,6 +41,7 @@ const Navbar = () => {
             <li><NavLink className='text-black mb-2 font-bold' to="/instructors">Instructors</NavLink> </li>
             <li><NavLink className='text-black mb-2 font-bold' to="/classes">Classes</NavLink> </li>
             <div className=" navbar-end">
+            {user&& <li><NavLink className='text-black font-bold' to="/dashboard">Dashboard</NavLink> </li>}
           
             {user ? <button onClick={handleLogOut} className="btn btn-sm btn-outline bg-blue-200 ">Log Out</button>:<Link to="/login" className="btn btn-sm  h-[40px]  bg-blue-200 md:mx-4">Login</Link> }
             

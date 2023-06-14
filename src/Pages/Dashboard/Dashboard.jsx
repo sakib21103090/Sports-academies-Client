@@ -31,24 +31,23 @@ const Dashboard = () => {
         
          <li className='mb-6'><NavLink to="/dashboard/adminHome"><FaHome></FaHome> Admin Home </NavLink> </li>
 
-         <li className='mb-6'><NavLink to="/dashboard/manageClasses"><FaBook></FaBook> Manage Classes</NavLink> </li>
+         <li className='mb-6 text-black'><NavLink to="/dashboard/manageClasses"><FaBook></FaBook> Manage Classes</NavLink> </li>
 
-        <li><NavLink to="/dashboard/manageUsers"><FaUser></FaUser>Manage Users</NavLink> </li>
+        <li className='text-black'><NavLink to="/dashboard/manageUsers"><FaUser></FaUser>Manage Users</NavLink> </li>
 
   </> :
    isInstructor?<> 
    <li className='mb-6 text-4xl text-white font-bold'>Instructor Dashboard </li>
-        <li className='mb-6'><NavLink to="/dashboard/addClass"><FaBook></FaBook> Add A Class</NavLink> </li>
-        <li><NavLink to="/dashboard/myClasses"><FaMoneyBill></FaMoneyBill>my Classes</NavLink> </li>
+        <li className='mb-6 text-black'><NavLink to="/dashboard/addClass"><FaBook></FaBook> Add A Class</NavLink> </li>
+        <li className='text-black'><NavLink to="/dashboard/myClasses"><FaMoneyBill></FaMoneyBill>my Classes</NavLink> </li>
   </> :
         
         <> 
         <li className='mb-6 text-4xl text-white font-bold'>User Dashboard </li>
         {/* <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes </NavLink> </li> */}
-         <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes<span>
-                    <div className="badge badge-primary">+{cart?.length || 0}</div>
-                </span></NavLink> </li>
-        <li><NavLink to="/dashboard/enrolledClasses"><FaMoneyBill></FaMoneyBill>My Enrolled Classes</NavLink> </li>
+         <li className='mb-6 text-black'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes<span>      <div className="badge badge-primary">+{cart?.length || 0}</div>
+           </span></NavLink> </li>
+        <li className='text-black'><NavLink to="/dashboard/enrolledClasses"><FaMoneyBill></FaMoneyBill>My Enrolled Classes</NavLink> </li>
   </>
       }
 

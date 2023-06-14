@@ -21,6 +21,8 @@ import MyClasses from "../Pages/Dashboard/InstructorsDasboard/MyClasses";
 import AdminRoutes from "./AdminRoutes";
 import ManageUsers from "../Pages/Dashboard/AdminDasboard/ManageUsers";
 import PrivateRoute from "./PrivateRoute";
+import Payment from "../Pages/Dashboard/StudentsDasboard/Payment";
+
 
 
 
@@ -93,7 +95,17 @@ import PrivateRoute from "./PrivateRoute";
             path : 'myClasses',
             element : <MyClasses></MyClasses>
           },
+          // {
+          //   path : 'checkOut/:id',
+          //   element : <CheckOut></CheckOut>
+          // },
+          {
+            path : 'payment/:id',
+            element : <Payment></Payment>
+          },
+          
         ]
       
-    }
+    },
+    
   ]);

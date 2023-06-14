@@ -19,8 +19,6 @@ console.log(Class)
       <td>
       <button className="btn btn-outline btn-sm w-[60px] bg-blue-400">Update</button>
         </td>
-      
-      
         
       </tr>
     );

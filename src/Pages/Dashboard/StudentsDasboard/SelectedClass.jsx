@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react';
 import UseCart from '../../../Components/Hooks/UseCart';
-import { FaCcAmazonPay, FaTrashAlt } from 'react-icons/fa';
+import {FaTrashAlt } from 'react-icons/fa';
+import {MdPayment } from 'react-icons/md';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const SelectedClass = () => {
  
@@ -57,11 +59,11 @@ const SelectedClass = () => {
                         <th className='text-black'>{index + 1}</th>
                         <td className='text-black'>{cart.className}</td>
                         <td ><img className='w-[60px] rounded' src={cart.classImage} alt="" /></td>
-                        <td className='text-black'>{cart.price}</td>
-                        {/* onClick={() => handleMakeAdmin(user)} */}
-                        {/* onClick={() => handleDelete(user)} */}
+                        <td className='text-black'>${cart.price}</td>
+                        
                         <td>
-                            <button   className="btn text-black text-2xl bg-blue-100 rounded-full "><FaCcAmazonPay></FaCcAmazonPay></button> 
+                            <Link to={`/dashboard/payment/${cart._id}`} className="btn text-black text-2xl bg-blue-100 rounded-full "><MdPayment></MdPayment> </Link> 
+                      
                             </td>
                         
                         <td><button onClick={() => handleDelete(cart)}  className="btn btn-ghost rounded-full bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button></td>
