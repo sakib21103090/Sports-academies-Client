@@ -14,7 +14,7 @@ const AllCardClass = ({Class}) => {
     const handleAddToCart = item => {
       console.log(item);
       if(user && user.email){
-          const cartItem = {classId: _id, className, classImage,availableSeats, price, email: user.email}
+          const cartItem = {className, classImage,availableSeats, price, email: user.email}
           fetch('http://localhost:5000/carts', {
               method: 'POST',
               headers: {
@@ -52,7 +52,10 @@ const AllCardClass = ({Class}) => {
       }
   }
     return (
-    <div className="card card-compact  bg-base-100 shadow-xl mx-auto">
+    <div className={`${availableSeats === 0 ?
+      "card card-compact h-full rounded-none  bg-red-400  shadow-xl"
+      : "card card-compact h-full rounded-none bg-base-100  shadow-xl"
+      }`}>
     <figure><img className='w-[400px]  h-[200px] rounded' src={classImage} alt="" /></figure>
     <div className="card-body text-slate-900">
       <h2 className="card-title text-2xl "> Name: {className}</h2>

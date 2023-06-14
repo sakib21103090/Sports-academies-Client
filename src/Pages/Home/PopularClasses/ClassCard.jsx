@@ -11,7 +11,7 @@ return (
   <p className='text-slate-900 '>Available Seats:{availableSeats}</p>
   <p className='text-slate-900 '>Price:${price}</p>
   <div className="card-actions justify-end">
-  <button className="btn btn-sm btn-outline btn-secondary">Select</button>
+ 
   </div>
 </div>
 </div>

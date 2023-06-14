@@ -15,7 +15,7 @@ const Dashboard = () => {
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex  bg-blue-100 flex-col items-center justify-center">
     {/* Page content here */}
-    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+    <label htmlFor="my-drawer-2" className="btn bg-sky-400 mb-4 mt-2 drawer-button lg:hidden">Open drawer</label>
  <Outlet></Outlet>
   </div> 
   <div className="drawer-side">
@@ -45,9 +45,9 @@ const Dashboard = () => {
         <> 
         <li className='mb-6 text-4xl text-white font-bold'>User Dashboard </li>
         {/* <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes </NavLink> </li> */}
-         <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes<p>
+         <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes<span>
                     <div className="badge badge-primary">+{cart?.length || 0}</div>
-                </p></NavLink> </li>
+                </span></NavLink> </li>
         <li><NavLink to="/dashboard/enrolledClasses"><FaMoneyBill></FaMoneyBill>My Enrolled Classes</NavLink> </li>
   </>
       }
