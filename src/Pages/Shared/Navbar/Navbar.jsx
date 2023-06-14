@@ -13,7 +13,7 @@ const Navbar = () => {
   }
   
     return (
-        <div  className="navbar  bg-blue-900 fixed z-10 max-w-screen-xl text-white">
+        <div  className="navbar  fixed z-10 bg-opacity-30 max-w-screen-xl bg-blue-700 text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn bg-blue-100 lg:hidden">
@@ -44,7 +44,7 @@ const Navbar = () => {
            
            {user&& <li><NavLink className='text-white font-bold' to="/dashboard">Dashboard</NavLink> </li>}
 
-           {user ? <button onClick={handleLogOut} className="btn btn-sm btn-outline bg-blue-200 ">Log Out</button>:<Link to="/login" className="btn btn-sm  h-[40px]  bg-blue-200 md:mx-4">Login</Link> }
+           {user ? <button onClick={handleLogOut} className="btn btn-sm btn-outline bg-blue-300 ">Log Out</button>:<Link to="/login" className="btn btn-sm  h-[30px]  bg-blue-300 md:mx-4">Login</Link> }
          
           </ul>
         </div>

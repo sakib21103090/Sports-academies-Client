@@ -1,13 +1,15 @@
 import React from 'react';
-import { FaBook, FaHome, FaMoneyBill, FaUser } from 'react-icons/fa';
+import { FaBook, FaHome, FaMoneyBill, FaShoppingCart, FaUser } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import UseAdmin from '../../Components/Hooks/UseAdmin';
 import UseInstructor from '../../Components/Hooks/UseInstructor';
+import UseCart from '../../Components/Hooks/UseCart';
 
 const Dashboard = () => {
   const [isAdmin]=UseAdmin();
   const [isInstructor]=UseInstructor();
-  
+  const[cart]=UseCart();
+ console.log(cart)
     return (
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -42,8 +44,10 @@ const Dashboard = () => {
         
         <> 
         <li className='mb-6 text-4xl text-white font-bold'>User Dashboard </li>
-        <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes</NavLink> </li>
-  
+        {/* <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes </NavLink> </li> */}
+         <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes<p>
+                    <div className="badge badge-primary">+{cart?.length || 0}</div>
+                </p></NavLink> </li>
         <li><NavLink to="/dashboard/enrolledClasses"><FaMoneyBill></FaMoneyBill>My Enrolled Classes</NavLink> </li>
   </>
       }

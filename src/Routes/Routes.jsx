@@ -20,6 +20,7 @@ import AddClass from "../Pages/Dashboard/InstructorsDasboard/AddClass";
 import MyClasses from "../Pages/Dashboard/InstructorsDasboard/MyClasses";
 import AdminRoutes from "./AdminRoutes";
 import ManageUsers from "../Pages/Dashboard/AdminDasboard/ManageUsers";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -57,7 +58,7 @@ import ManageUsers from "../Pages/Dashboard/AdminDasboard/ManageUsers";
     {
       
         path : 'dashboard',
-        element :<Dashboard></Dashboard>,
+        element :<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children :[
           {
             path : 'selectedClass',
