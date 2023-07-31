@@ -4,9 +4,9 @@ const ClassCard = ({Class}) => {
 
 const { className, classImage,availableSeats,price } =Class;
 return (
-<div className="card card-compact  bg-sky-300 shadow-xl mx-auto">
-<figure><img className='w-[300px] h-[200px] rounded ' src={classImage} alt="" /></figure>
-<div className="card-body ">
+<div className="max-w-md mx-auto h-full bg-white shadow-lg rounded-lg overflow-hidden">
+<figure><img className="card-Image" src={classImage} alt="" /></figure>
+<div className="card-body  card-bg">
   <h2 className="card-title text-primary-color text-2xl"> Class Name: {className}</h2>
   <p className=' text-primary-color'>Available Seats:{availableSeats}</p>
   <p className='text-primary-color '>Price:${price}</p>

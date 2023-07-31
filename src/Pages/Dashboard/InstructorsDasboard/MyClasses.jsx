@@ -6,9 +6,9 @@ const MyClasses = () => {
     const [myClasses, setMyClasses] = useState([]);
     const { user } = useContext(AuthContext);
     
-    
+    console.log(user)
     useEffect(() => {
-        fetch(`https://sport-academy-server.vercel.app/myClass/${user?.email}`)
+        fetch(`https://sport-academy-server-v2.vercel.app/myClass/${user?.email}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

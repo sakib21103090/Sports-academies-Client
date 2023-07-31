@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 
+.card-Image {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+  .card-bg{
+    background: linear-gradient( #74a5ee,rgb(238, 173, 217),rgb(129, 81, 207));
+  }
