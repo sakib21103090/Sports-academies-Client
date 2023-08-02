@@ -5,7 +5,7 @@ const ClassCard = ({Class}) => {
 const { className, classImage,availableSeats,price } =Class;
 return (
 <div className="max-w-md w-full  mx-auto h-full bg-white shadow-lg rounded-lg overflow-hidden">
-<figure><img className="card-Image " src={classImage} alt="" /></figure>
+<figure><img className="card-Image" src={classImage} alt="" /></figure>
 <div className="card-body  card-bg">
   <h2 className="card-title text-primary-color text-2xl"> Class Name: {className}</h2>
   <p className=' text-primary-color'>Available Seats:{availableSeats}</p>
