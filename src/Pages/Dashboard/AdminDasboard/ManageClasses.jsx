@@ -5,7 +5,7 @@ const ManageClasses = () => {
     const [classesData, setClassesData] = useState([]);
 
     useEffect(() => {
-        fetch('https://sport-academy-server.vercel.app/classes')
+        fetch('https://sport-academy-server-v2.vercel.app/classes')
             .then(res => res.json())
             .then((data) => {
                 console.log(data);

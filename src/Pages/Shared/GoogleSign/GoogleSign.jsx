@@ -13,7 +13,7 @@ const GoogleSign = () => {
         .then(result=>{
             const user=result.user;
             const saveUser = { name: user.displayName, email: user.email }
-            fetch('https://sport-academy-server.vercel.app/users', {
+            fetch('https://sport-academy-server-v2.vercel.app/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

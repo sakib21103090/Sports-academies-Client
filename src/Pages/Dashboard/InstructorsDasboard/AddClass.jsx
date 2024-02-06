@@ -48,7 +48,7 @@ const AddClass = () => {
                
               };
 
-              fetch("https://sport-academy-server.vercel.app/addClass", {
+              fetch("https://sport-academy-server-v2.vercel.app/addClass", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(classItems),

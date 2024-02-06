@@ -8,7 +8,7 @@ const PopularClasses = () => {
     const [ClassData, setClassData] = useState([]);
 
     useEffect(() => {
-        fetch('https://sport-academy-server.vercel.app/class')
+        fetch('https://sport-academy-server-v2.vercel.app/class')
             .then(res => res.json())
 
             .then((data) => {
@@ -19,13 +19,14 @@ const PopularClasses = () => {
     
       
     return (
+        <div className='bg-body pb-8 pt-12'>
         <section>
         <SectionTitle 
-        subHeading={"The School"}
+        subHeading={"The Academy"}
         heading={"Popular Classes"}
         ></SectionTitle>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-4 gap-4">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-10 max-w-screen-xl mx-auto gap-4">
           {
                  ClassData?.map(Class => <ClassCard
                     key={Class._id}
@@ -35,6 +36,7 @@ const PopularClasses = () => {
          </div>
         
         </section>
+        </div>
     );
 };
 

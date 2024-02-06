@@ -5,7 +5,7 @@ import InstructorCard from './InstructorCard';
 const PopularInstructors = () => {
     const [InstructorData, setInstructorData] = useState([]);
     useEffect(() => {
-        fetch('https://sport-academy-server.vercel.app/instructor')
+        fetch('https://sport-academy-server-v2.vercel.app/instructor')
             .then(res => res.json())
 
             .then((data) => {
@@ -15,13 +15,13 @@ const PopularInstructors = () => {
     }, [])
       
     return (
-        <section>
+        <section className='pt-12 bg-body pb-8'>
         <SectionTitle 
-        subHeading={"The School"}
+        subHeading={"The Academy"}
         heading={"Popular Instructor"}
         ></SectionTitle>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 mt-10">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-10 max-w-screen-xl mx-auto gap-4">
           {
                    InstructorData?.map(instructor => <InstructorCard
                     key={instructor._id}

@@ -8,7 +8,7 @@ const UseAxios = () => {
     const navigate = useNavigate(); 
   
     const axiosSecure = axios.create({
-      baseURL: 'https://sport-academy-server.vercel.app', 
+      baseURL: 'https://sport-academy-server-v2.vercel.app', 
     });
   
     useEffect(() => {

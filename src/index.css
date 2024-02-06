@@ -3,3 +3,19 @@
 @tailwind utilities;
 
 
+.Dis-body{
+   
+        background: linear-gradient(rgb(248, 194, 248) ,rgb(205, 197, 243),rgb(248, 194, 248) );
+      }
+.bg-card{
+   
+        background: linear-gradient(rgb(248, 194, 248) ,rgb(248, 194, 248) ,rgb(248, 194, 248) );
+      }
+
+ .img-t{
+transition:all 1.1s ;
+ }     
+
+ .for-transform :hover .img-t{
+    transform: scale(1.2);
+ }
