@@ -11,16 +11,16 @@ const Dashboard = () => {
   const[cart]=UseCart();
  console.log(cart)
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer  lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-  <div className="drawer-content flex  bg-blue-100 flex-col items-center justify-center">
+  <div className="drawer-content flex field-bg flex-col items-center justify-center">
     {/* Page content here */}
-    <label htmlFor="my-drawer-2" className="btn bg-sky-400 mb-4 mt-2 drawer-button lg:hidden">Open drawer</label>
+    <label htmlFor="my-drawer-2" className="btn card-bg mb-4 mt-2 drawer-button lg:hidden">Open drawer</label>
  <Outlet></Outlet>
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-80 h-full    text-base-content  bg-sky-400">
+    <ul className="menu p-4 w-80 h-full    text-base-content  card-bg">
       {/* Sidebar content here */}
       <div>
       <h2 className='text-center mx-auto '>  <img className=' text-center mx-auto w-[120px]' src={`https://i.ibb.co/NrN9Nfc/kogo.png`} alt="" /><span className="text-white text-4xl font-bold ">Sport Academy </span></h2>

@@ -13,11 +13,11 @@ console.log(Class)
       <td>{Class.price}</td> 
       <td>{Class.students}</td> 
       <td>
-      <button className="btn btn-outline btn-sm w-[70px] bg-blue-400">pending</button>
+      <button className="btn btn-outline btn-sm w-[70px] bg-slate-900 text-white ">pending</button>
         </td>
       
       <td>
-      <button className="btn btn-outline btn-sm w-[60px] bg-blue-400">Update</button>
+      <button className="btn btn-outline btn-sm w-[60px] bg-slate-900 text-white ">Update</button>
         </td>
         
       </tr>
