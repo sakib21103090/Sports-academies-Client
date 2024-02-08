@@ -115,7 +115,7 @@ const SignUp = () => {
                             <p className='my-4 text-center font-bold text-black'>Already have an account<Link className='text-green-300 font-bold' to="/login">Login</Link> </p> 
                             
                         </form>
-                        <div>
+                        <div className='ml-8'>
                             <GoogleSign></GoogleSign>
                         </div>
                     </div>

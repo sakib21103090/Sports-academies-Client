@@ -53,14 +53,15 @@ const AllCardClass = ({Class}) => {
   }
     return (
     <div className= {`${availableSeats === 0 ?
-      "card rounded card-compact h-full   bg-red-400  shadow-xl"
-      : "card  card-compact h-full rounded   shadow-xl"
+      "card w-[300px] h-[350px] for-transform bg-red-400 border-separate mx-auto  shadow-xl"
+      : "card card-compact hover:x-50 w-[300px] h-[350px] for-transform bg-transparent  bg-card shadow-xl border-separate mx-auto"
       }`}>
-    <figure><img className='w-[400px]  h-[200px] rounded p-4' src={classImage} alt="" /></figure>
+    <figure><img className='w-[300px] h-[300px] rounded imgt' src={classImage} alt="" /></figure>
     <div className="card-body ">
       <h2 className="card-title text-2xl "> Name: {className}</h2>
-      <p className='text-primary-color '>Available Seats:{availableSeats}</p>
-      <p className='text-primary-color'>Price:${price}</p>
+     
+  <p className=' text-primary-color'><span className=' font-bold'>Available Seats: </span>{availableSeats}</p>
+  <p className='text-primary-color '><span className='font-bold'>Price:$ </span>{price}</p>
       <div className="card-actions justify-end">
       <button onClick={() => handleAddToCart(Class)} className="btn btn-sm btn-outline btn-secondary">Select</button>
       </div>

@@ -3,14 +3,12 @@ import React from 'react';
 const InstructorCard = ({instructor}) => {
   const { instructorImage, instructorName,instructorEmail} =instructor;
   return (
-  <div className="card card-compact hover:x-50 w-[300px] h-[350px] for-transform bg-card bg-transparent  shadow-xl border-separate mx-auto">
-  <figure><img className='w-[300px] h-[300px] rounded  img-t' src={instructorImage} alt="" /></figure>
+  <div className="card card-compact hover:x-50 w-[200px] h-[250px] for-transform bg-transparent  shadow-md bg-t  shadow-fuchsia-600 mx-auto">
+  <figure><img className='w-[100px] h-[100px] rounded-full mt-4 border-4 border-yellow-400  img-t' src={instructorImage} alt="" /></figure>
   <div className="card-body ">
-    <h2 className="card-title text-2xl text-primary-color"> Name: {instructorName}</h2>
-    <p className='text-primary-color'> <span className='font-bold'>Email: </span>{instructorEmail}</p>
-    <div className="card-actions justify-end">
-    <button className="btn btn-sm btn-outline btn-primary">See Classes</button>
-    </div>
+    <h2 className=" font-bold text-primary-color text-white"> <span className='text-black'>Name:</span> {instructorName}</h2>
+    <p className='text-black'>{instructorEmail}</p>
+    
   </div>
 </div>
     );

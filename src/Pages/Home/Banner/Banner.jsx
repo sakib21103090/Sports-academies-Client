@@ -9,7 +9,7 @@ import img5 from '../../../assets/bs5.png'
 
 const Banner = () => {
     return (
-        <div className="carousel h-[600px] max-w-screen-2xl mx-auto ">
+        <div className="carousel h-[650px] max-w-screen-2xl mx-auto ">
         <div id="slide1" className="carousel-item relative w-full"> {/* slider one */}
           <img src={img1} className="w-full rounded-xl" />
           <div className="absolute rounded-lg flex items-center transform h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21)]">

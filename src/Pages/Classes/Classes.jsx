@@ -17,7 +17,7 @@ const Classes = () => {
       
     return (
 
-        <section className='p-28'>
+        <section className='p-28 Dis-body'>
         <SectionTitle 
         subHeading={"The School"}
         heading={" Classes"}

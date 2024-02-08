@@ -21,7 +21,7 @@ const PopularInstructors = () => {
         heading={"Popular Instructor"}
         ></SectionTitle>
 
-          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-10 max-w-screen-xl mx-auto gap-4">
+          <div className="grid p-4 m-4  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6  pt-10 max-w-screen-xl mx-auto gap-4">
           {
                    InstructorData?.map(instructor => <InstructorCard
                     key={instructor._id}

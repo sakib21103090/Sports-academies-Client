@@ -19,14 +19,14 @@ const PopularClasses = () => {
     
       
     return (
-        <div className='bg-body pb-8 pt-12'>
+        <div className='bg-body  pb-8 pt-12'>
         <section>
         <SectionTitle 
         subHeading={"The Academy"}
         heading={"Popular Classes"}
         ></SectionTitle>
 
-          <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-10 max-w-screen-xl mx-auto gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-10 max-w-screen-xl mx-auto gap-4">
           {
                  ClassData?.map(Class => <ClassCard
                     key={Class._id}
