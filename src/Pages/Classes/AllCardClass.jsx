@@ -53,12 +53,12 @@ const AllCardClass = ({Class}) => {
   }
     return (
     <div className= {`${availableSeats === 0 ?
-      "card w-[300px] h-[350px] for-transform bg-red-400 border-separate mx-auto  shadow-xl"
-      : "card card-compact hover:x-50 w-[300px] h-[350px] for-transform bg-transparent  bg-card shadow-xl border-separate mx-auto"
+      "card w-[250px] h-[340px] for-transform bg-red-400 border-separate mx-auto  shadow-xl"
+      : "card card-compact hover:x-50 w-[250px] h-[350px] all-card-bg for-transform mb-4 shadow-xl  mx-auto"
       }`}>
-    <figure><img className='w-[300px] h-[300px] rounded imgt' src={classImage} alt="" /></figure>
+    <figure><img className='w-[250px] h-[180px] rounded-b-3xl  ' src={classImage} alt="" /></figure>
     <div className="card-body ">
-      <h2 className="card-title text-2xl "> Name: {className}</h2>
+      <h2><span className='text-xl font-bold'> Name:</span> {className}</h2>
      
   <p className=' text-primary-color'><span className=' font-bold'>Available Seats: </span>{availableSeats}</p>
   <p className='text-primary-color '><span className='font-bold'>Price:$ </span>{price}</p>

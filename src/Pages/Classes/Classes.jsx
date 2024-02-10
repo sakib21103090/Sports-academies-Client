@@ -17,13 +17,16 @@ const Classes = () => {
       
     return (
 
-        <section className='p-28 Dis-body'>
-        <SectionTitle 
+        <section >
+            <div className='p-28 '>
+            <SectionTitle 
         subHeading={"The School"}
         heading={" Classes"}
         ></SectionTitle>
+            </div>
+        
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4 gap-4 ">
+        <div className="grid max-w-screen-xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-4 lg:ml-20 ">
         {
                  classesData?.map(Class => <AllCardClass
                     key={Class._id}

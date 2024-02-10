@@ -82,13 +82,12 @@ const ManageUsers = () => {
 }
     return (
         <div>
-             <h2 className='text-4xl text-center text-black font-bold mb-20'>Users :{users.length}</h2>
            
-            <div className="overflow-x-auto">
-                <table className="table  w-full ">
+            <div className="pl-40">
+                <table className="table border-l-2 border-lime-500 border-r-2 border-b-2 mt-28">
                     {/* head */}
                     <thead>
-                        <tr className='bg-sky-400 text-black font-bold'>
+                        <tr className='bg-lime-500 text-black font-bold'>
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>

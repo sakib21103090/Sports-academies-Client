@@ -7,19 +7,19 @@ const ManageClassTable = ({Class,index}) => {
         <th>{index+1}</th> 
        
       <td>{className}</td> 
-      <td><img className='w-[60px] h-[40px] rounded-full' src={classImage} alt="" /></td> 
+      <td><img className='w-[60px] h-[40px] rounded-xl' src={classImage} alt="" /></td> 
       <td>{instructorName}</td> 
-      <td><img className='w-[60px] h-[40px] rounded-full' src={instructorImage} alt="" /></td> 
+      <td><img className='w-[60px] h-[40px] rounded-xl' src={instructorImage} alt="" /></td> 
       <td>{price}</td> 
       <td>{availableSeats}</td> 
       <td>
-      <button className="btn btn-outline btn-sm w-[70px] bg-blue-400">Approve</button>
+      <button className="btn btn-outline btn-sm w-[75px] bg-lime-500">Approve</button>
         </td>
       <td>
-      <button className="btn btn-outline btn-sm w-[60px] bg-blue-400">Deny</button>
+      <button className="btn btn-outline btn-sm w-[60px] bg-lime-500">Deny</button>
         </td>
       <td>
-      <button className="btn btn-outline btn-sm w-[70px] bg-blue-400">FeedBack</button>
+      <button className="btn btn-outline btn-sm w-[85px] bg-lime-500">FeedBack</button>
         </td>
       
       
