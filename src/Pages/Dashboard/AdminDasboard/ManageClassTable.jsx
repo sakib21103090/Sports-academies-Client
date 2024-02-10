@@ -13,13 +13,13 @@ const ManageClassTable = ({Class,index}) => {
       <td>{price}</td> 
       <td>{availableSeats}</td> 
       <td>
-      <button className="btn btn-outline btn-sm w-[75px] bg-lime-500">Approve</button>
+      <button className="btn btn-outline btn-sm  bg-lime-500">Approve</button>
         </td>
       <td>
-      <button className="btn btn-outline btn-sm w-[60px] bg-lime-500">Deny</button>
+      <button className="btn btn-outline btn-sm  bg-lime-500">Deny</button>
         </td>
       <td>
-      <button className="btn btn-outline btn-sm w-[85px] bg-lime-500">FeedBack</button>
+      <button className="btn btn-outline btn-sm  bg-lime-500">FeedBack</button>
         </td>
       
       

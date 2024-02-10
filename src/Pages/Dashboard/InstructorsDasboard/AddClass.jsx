@@ -74,12 +74,12 @@ const AddClass = () => {
     }
 
     return (
-        <div>
+        <div className='mt-12 max-w-screen-md mx-auto'>
         {/* <Helmet>
         <title>Animal-Toy-planet | Add A Toy</title>
       </Helmet> */}
          <div>
-              <h2 className="text-center  font-bold text-black text-5xl m-6 p-6">Add  Class</h2>
+              <h2 className="text-center  font-bold text-lime-500 text-4xl m-6 p-6">Add  Class</h2>
          </div>
          <div>
          <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto mb-5">
@@ -87,7 +87,7 @@ const AddClass = () => {
     
      <div className="form-control">
            <label className="label">
-           <span className="block ">class Image</span></label>
+           <span className="block text-lime-600 font-bold ">class Image</span></label>
            <input type="file" {...register("image", { required: true })} className="file-input  input-bg file-input-bordered "/>                       
         </div>
                             {/* <div>
@@ -96,31 +96,31 @@ const AddClass = () => {
         </div> */}
 
      <div>
-       <label htmlFor="name" className="block  mb-1"> Class Name:</label>
+       <label htmlFor="name" className="block text-lime-600 font-bold mb-5"> Class Name:</label>
        <input type="text" id="className" {...register('className')} className="w-full bg-transparent px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-lime-500" />
      </div>
 
      <div>
-       <label htmlFor="instructorName" className="block  mb-1">instructor Name:</label>
+       <label htmlFor="instructorName" className="block text-lime-600 font-bold mb-1">instructor Name:</label>
        <input type="text" id="instructorName" {...register('instructorName')}  defaultValue={user?.displayName} className="w-full bg-transparent px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-lime-500" />
       
      </div>
 
      <div>
-       <label htmlFor="instructorEmail" className="block  mb-1">instructor email:</label>
+       <label htmlFor="instructorEmail" className="block text-lime-600 font-bold  mb-1">instructor email:</label>
        <input type="email" id="instructorEmail" {...register('instructorEmail')} defaultValue={user?.email} className="w-full bg-transparent px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-lime-500" />
      </div>
 
      <div>
-       <label htmlFor="availableSeats" className="block  mb-1">availableSeats:</label>
+       <label htmlFor="availableSeats" className="block text-lime-600 font-bold mb-1">availableSeats:</label>
        <input type="number"   id="availableSeats" {...register('availableSeats')} className="w-full bg-transparent px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-lime-500" />
      </div>
      <div>
-       <label htmlFor="students" className="block  mb-1">students</label>
+       <label htmlFor="students" className="block text-lime-600 font-bold mb-1">students</label>
        <input type="number"   id="students" {...register('students')} className="w-full bg-transparent px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-lime-500" />
      </div>
      <div>
-       <label htmlFor="price" className="block  mb-1">Price:</label>
+       <label htmlFor="price" className="block text-lime-600 font-bold mb-1">Price:</label>
        <input type="number" step="0.01" id="price" {...register('price')} className="w-full bg-transparent px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-lime-500" />
      </div>
 
@@ -129,7 +129,7 @@ const AddClass = () => {
    </div>
    
 
-   <button type="submit" className="mt-4 bg-transparent px-4 py-2  bg-slate-900 text-white rounded hover:bg-blue-600">Submit</button>
+   <button type="submit" className=" mt-4 btn btn-outline btn-success">Submit</button>
  </form>
 
    </div>

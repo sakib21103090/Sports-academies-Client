@@ -86,17 +86,21 @@ const Navbar = () => {
         <div className="dropdown dropdown-end">
     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
       <div className="w-10 rounded-full">
-      {user && <img className='rounded-full w-[50px] m-0 p-0' src={user.photoURL}  /> }  
+      {user?<img className='rounded-full w-[50px] m-0 p-0' src={user.photoURL}  />:<p className='  pt-3 text-white'>In</p> }  
       </div>
     </div>
-    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  bg-transparent text-black rounded-box w-52">
       <li>
         <a className="justify-between">
           Profile
         </a>
+        <a className="justify-between">
+        {user ? <button onClick={handleLogOut} >Log Out</button>:<Link to="/login" >Login</Link> }
+        </a>
       </li>
-      {user ? <button onClick={handleLogOut} className="btn btn-sm btn-outline bg-gray-400 ">Log Out</button>:<Link to="/login" className="btn btn-sm  h-[30px]  class-card-bg hover:bg-lime-400 md:mx-4">Login</Link> }
+      {/* {user ? <button onClick={handleLogOut} className="btn  ">Log Out</button>:<Link to="/login" className="btn ">Login</Link> } */}
     </ul>
+    
   </div>
         </div>
         

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import LoadDataIns from './LoadDataIns';
+import { Helmet } from 'react-helmet';
 
 const Instructors = () => {
     const [instructorsData, setInstructor] = useState([]);
@@ -15,6 +16,9 @@ const Instructors = () => {
     }, [])
     return (
         <section className='p-28 '>
+             <Helmet>
+           <title>Sports-Academies | Instructors</title>
+         </Helmet>
         <SectionTitle 
         subHeading={"The School"}
         heading={" Instructors"}

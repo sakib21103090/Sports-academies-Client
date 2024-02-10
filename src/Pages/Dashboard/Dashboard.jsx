@@ -1,9 +1,12 @@
 import React from 'react';
-import { FaBook, FaHome, FaMoneyBill, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaBook, FaHome, FaMoneyBill, FaHouseUser, FaUser } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import UseAdmin from '../../Components/Hooks/UseAdmin';
 import UseInstructor from '../../Components/Hooks/UseInstructor';
 import UseCart from '../../Components/Hooks/UseCart';
+import { GiTeacher } from "react-icons/gi";
+import { SiGoogleclassroom } from "react-icons/si";
+
 
 const Dashboard = () => {
   const [isAdmin]=UseAdmin();
@@ -38,17 +41,17 @@ const Dashboard = () => {
 
   </> :
    isInstructor?<> 
-   <li className='mb-6 text-4xl text-white font-bold'>Instructor Dashboard </li>
-        <li className='mb-6 text-black'><NavLink to="/dashboard/addClass"><FaBook></FaBook> Add A Class</NavLink> </li>
-        <li className='text-black'><NavLink to="/dashboard/myClasses"><FaMoneyBill></FaMoneyBill>my Classes</NavLink> </li>
+   <li className='mb-6 w-full font-bold text-black'><NavLink to="/dashboard/instructor"><span className='text-lime-500 text-2xl'><GiTeacher></GiTeacher></span>Instructor Home </NavLink> </li>
+        <li className='mb-6 text-black font-bold'><NavLink to="/dashboard/addClass"><span className='text-lime-500 text-2xl'><FaBook></FaBook></span> Add A Class</NavLink> </li>
+        <li className='text-black font-bold'><NavLink to="/dashboard/myClasses"><span className='text-lime-500 text-2xl'><SiGoogleclassroom></SiGoogleclassroom></span>my Classes</NavLink> </li>
   </> :
         
         <> 
-        <li className='mb-6 w-40 font-bold'>User Dashboard </li>
+        <li className='mb-6 w-full font-bold'><NavLink to="/dashboard/UserHome"><span className='text-lime-500 text-2xl'><FaHouseUser></FaHouseUser></span>User Home</NavLink> </li>
         {/* <li className='mb-6'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes </NavLink> </li> */}
-         <li className='mb-4 w-full font-bold'><NavLink to="/dashboard/selectedClass"><FaBook></FaBook> My Selected Classes<span>      <div className="badge badge-primary">+{cart?.length || 0}</div>
+         <li className='mb-4 w-full font-bold'><NavLink to="/dashboard/selectedClass"><span className='text-lime-500 text-2xl'><FaBook></FaBook></span> My Selected Classes<span>      <div className="badge badge-primary">+{cart?.length || 0}</div>
            </span></NavLink> </li>
-        <li className='mb-6 w-40 font-bold'><NavLink to="/dashboard/enrolledClasses"><FaMoneyBill></FaMoneyBill>My Enrolled Classes</NavLink> </li>
+        <li className='mb-6 w-full font-bold'><NavLink to="/dashboard/enrolledClasses"><span className='text-lime-500 text-2xl'><FaMoneyBill></FaMoneyBill></span>My Enrolled Classes</NavLink> </li>
   </>
       }
 

@@ -22,6 +22,8 @@ import AdminRoutes from "./AdminRoutes";
 import ManageUsers from "../Pages/Dashboard/AdminDasboard/ManageUsers";
 import PrivateRoute from "./PrivateRoute";
 import Payment from "../Pages/Dashboard/StudentsDasboard/Payment";
+import InstructorHome from "../Pages/Dashboard/InstructorsDasboard/InstructorHome";
+import UsersHome from "../Pages/Dashboard/StudentsDasboard/UsersHome";
 
 
 
@@ -67,6 +69,10 @@ import Payment from "../Pages/Dashboard/StudentsDasboard/Payment";
             element : <SelectedClass></SelectedClass>
           },
           {
+            path : 'UserHome',
+            element : <UsersHome></UsersHome>
+          },
+          {
             path : 'enrolledClasses',
             element : <EnrolledClasses></EnrolledClasses>
           },
@@ -90,6 +96,10 @@ import Payment from "../Pages/Dashboard/StudentsDasboard/Payment";
           {
             path : 'addClass',
             element : <AddClass></AddClass>
+          },
+          {
+            path : 'instructor',
+            element : <InstructorHome></InstructorHome>
           },
           {
             path : 'myClasses',

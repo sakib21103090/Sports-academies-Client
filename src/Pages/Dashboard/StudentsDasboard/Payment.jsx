@@ -18,10 +18,13 @@ const Payment = () => {
     const total = cart.price;
     const price = parseFloat(total)
     return (
-        <div className='card bg-sky-300 w-[600px] h-[300px]'>
+        <div className='max-screen-w-xl mx-auto mt-20 '>
+            <h1 className='font-bold text-lime-600 text-3xl mb-6 font-serif'>Pay For Enroll Class</h1>
+            <div className='card bg-lime-200 w-[600px] h-[300px]'>
             <Elements stripe={stripePromise}>
                 <CheckOut cart={cart} price={price}></CheckOut>
             </Elements>
+        </div>
         </div>
     );
 };

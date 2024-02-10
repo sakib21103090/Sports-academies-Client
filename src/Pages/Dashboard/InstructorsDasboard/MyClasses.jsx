@@ -17,7 +17,7 @@ const MyClasses = () => {
       }, [user]);
        console.log(myClasses)
     return (
-        <div>
+        <div className=' max-w-screen-lg mx-auto  mt-24'>
         
         {/* <Helmet>
         <title>Animal-Toy-planet |My Toy</title>
@@ -25,13 +25,13 @@ const MyClasses = () => {
       <div>
 
       </div>
-      <h1 className="text-center p-4  text-4xl font-bold">My Classes</h1>
+      <h1 className="text-center p-4  text-4xl font-bold text-lime-500">My Classes</h1>
   
       <div className='m-[40px]'>
       <div className="overflow-x-auto ">
-  <table className="table  w-full">
+  <table className="table border-l-2 border-lime-500 border-r-2 border-b-2 w-full">
     <thead>
-      <tr className="text-lime-700">
+      <tr className="text-black  bg-lime-500 font-extrabold">
         <th>#</th>  
         <th>Class Name</th> 
         <th>Image</th> 

@@ -40,11 +40,13 @@ const SelectedClass = () => {
     })
 }
     return (
+        <div className='max-w-screen-lg mx-auto  mt-24'>
+            <h1 className="text-center p-4  text-4xl font-bold text-lime-500">My Classes</h1>
         <div className="overflow-x-auto">
-        <table className="table  w-full ">
+        <table className="table  border-l-2 border-lime-500 border-r-2 border-b-2 w-full ">
             {/* head */}
             <thead>
-                <tr className='bg-sky-400 text-black font-bold'>
+                <tr className='bg-lime-500 text-black font-bold'>
                     <th>#</th>
                     <th> Class Name</th>
                     <th>Class Image</th>
@@ -62,7 +64,7 @@ const SelectedClass = () => {
                         <td className='text-black'>${cart.price}</td>
                         
                         <td>
-                            <Link to={`/dashboard/payment/${cart._id}`} className="btn text-black text-2xl bg-blue-100 rounded-full "><MdPayment></MdPayment> </Link> 
+                            <Link to={`/dashboard/payment/${cart._id}`} className="btn text-black text-2xl bg-lime-400 rounded-full "><MdPayment></MdPayment> </Link> 
                       
                             </td>
                         
@@ -74,6 +76,7 @@ const SelectedClass = () => {
             </tbody>
         </table>
     
+    </div>
     </div>
     );
 };
