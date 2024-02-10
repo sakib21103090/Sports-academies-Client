@@ -3,7 +3,7 @@ import logo from '../../../assets/logo.academy.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 footer-bg text-black">
+            <footer className="footer   p-10 footer-bg text-black">
         <div>
           <img className='w-[150px] h-[70px]  text-black  rounded-t-full border-4  border-lime-600 ' src={logo} alt="" />
           <p className='italic font-bold'> Pk Soprt Limited GT<br/>12 3 Main Uttra</p>
