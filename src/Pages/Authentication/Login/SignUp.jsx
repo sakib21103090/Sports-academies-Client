@@ -6,6 +6,7 @@ import { AuthContext } from '../../../Components/Providers/AuthProviders';
 import { useForm } from 'react-hook-form';
 import './Background.css';
 import GoogleSign from '../../Shared/GoogleSign/GoogleSign';
+import { Helmet } from 'react-helmet';
 
 
 const SignUp = () => {
@@ -64,24 +65,28 @@ const SignUp = () => {
     })
 };
     return (
-        <div className="hero min-h-screen background ">
-                <div className="hero-content flex-col lg:flex-row-reverse">
+        <div>
+            <Helmet>
+           <title>Sports-Academies | Sign Up</title>
+         </Helmet>
+        <div className="hero min-h-screen background">
+                <div className="hero-content ">
                     <div className="w-1/2 mr-12">
                     </div>
-                    <div className="card bg-blue-900 z-10 bg-opacity-30 flex-shrink-0 w-full max-w-sm shadow-1xl bg-s-100">
+                    <div className="card bg-blue-900 border-2 border-lime-700 bg-opacity-30 flex-shrink-0 w-full max-w-sm   shadow-1xl bg-s-100">
                         <form onSubmit={handleSubmit(HandelRegister)} className="card-body rounded mt-6 ">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text  font-bold text-black">Name</span>
+                                    <span className="font-bold text-black">Name</span>
                                 </label>
-                                <input type="text"  {...register("name", { required: true })} name="name" placeholder="Name" className="input input-bordered" />
+                                <input type="text"  {...register("name", { required: true })} name="name" placeholder="Name" className="input input-bordered h-10" />
                                 {errors.name && <span className="text-red-600">Name is required</span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-bold text-black">Photo URL</span>
+                                    <span className="label-text font-bold text-black ">Photo URL</span>
                                 </label>
-                                <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full "/>
+                                <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full h-10 "/>
                                 {errors.photoURL && <span className="text-red-600">Photo URL required</span>}
                             </div>
               
@@ -89,7 +94,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text font-bold text-black">Email</span>
                                 </label>
-                                <input type="email"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
+                                <input type="email"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered h-10" />
                                 {errors.email && <span className="text-red-600">Email is required</span>}
                             </div>
                             <div className="form-control">
@@ -101,7 +106,7 @@ const SignUp = () => {
                                     minLength: 6,
                                     maxLength: 20,
                                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
-                                })} placeholder="password" className="input input-bordered" />
+                                })} placeholder="password" className="input input-bordered h-10" />
                                 {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
                                 {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
                                 {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase one lower case, one number and one special character.</p>}
@@ -109,17 +114,18 @@ const SignUp = () => {
                                     <a href="#" className="label-text-alt  font-bold text-black  link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
-                                <input className="btn bg-blue-600 text-black" type="submit" value="Sign Up" />
+                            <div className="form-control mt-2">
+                                <input className="btn Login-bg text-black h-10" type="submit" value="Sign Up" />
                             </div>
                             <p className='my-4 text-center font-bold text-black'>Already have an account<Link className='text-green-300 font-bold' to="/login">Login</Link> </p> 
                             
                         </form>
-                        <div className='ml-8'>
+                        <div className='ml-8 '>
                             <GoogleSign></GoogleSign>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
     );
 };

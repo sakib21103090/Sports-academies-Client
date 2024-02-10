@@ -15,9 +15,9 @@ const ManageClasses = () => {
       
     return (
 
-        <table className="table  max-w-screen-lg border-l-2 border-lime-500 border-r-2 border-b-2 mt-10">
+        <table className="table w-full border-l-2 border-lime-500 border-r-2 border-b-2 mt-10">
         <thead>
-          <tr className="text-black  bg-lime-500 font-extrabold">
+          <tr className="text-black   bg-lime-500 font-extrabold">
             <th>#</th>  
             <th>Class Name</th> 
             <th>classImage</th> 

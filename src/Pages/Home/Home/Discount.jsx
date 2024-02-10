@@ -11,7 +11,7 @@ const Discount = () => {
             <Marquee>
   <div className="flex  gap-4 m-4">
         <div>
-        <div className="card card-compact  shadow-xl mx-auto  C-body">
+        <div className="card card-compact  shadow-xl mx-auto  all-card-bg">
 <figure><img className='w-[230px] h-[180px] rounded-b-3xl ' src={`https://i.ibb.co/MRX3KZ4/backetball-class.jpg`} /></figure>
 <div className="card-body text-blue-800">
   <h2 className="card-title "> <span className='font-bold text-black'>Name:</span> Backetball </h2>
@@ -25,7 +25,7 @@ const Discount = () => {
 </div>
         </div>
         <div>
-        <div className="card card-compact   shadow-xl mx-auto  C-body">
+        <div className="card card-compact   shadow-xl mx-auto  all-card-bg">
 <figure><img className='w-[230px] h-[180px] rounded-b-3xl   ' src={`https://i.ibb.co/cXQPXsd/volley2.jpg`} /></figure>
 <div className="card-body text-blue-800">
   <h2 className="card-title  text-2xl"><span className='font-bold text-black'>Name:</span> Volley </h2>
@@ -38,7 +38,7 @@ const Discount = () => {
 </div>
         </div>
         <div>
-        <div className="card card-compact  shadow-xl mx-auto  C-body">
+        <div className="card card-compact  shadow-xl mx-auto  all-card-bg">
 <figure><img className='w-[230px] h-[180px] rounded-b-3xl   ' src={"https://i.ibb.co/4Z8mK5V/crickets.jpg"} /></figure>
 <div className="card-body text-blue-800">
   <h2 className="card-title  text-2xl"><span className='font-bold text-black'>Name:</span> Crickets </h2>
@@ -51,7 +51,7 @@ const Discount = () => {
 </div>
         </div>
         <div>
-        <div className="card card-compact   shadow-xl mx-auto C-body">
+        <div className="card card-compact   shadow-xl mx-auto all-card-bg">
 <figure><img className='w-[230px] h-[180px] rounded-b-3xl   ' src={`https://i.ibb.co/KNGYZcW/yoga.jpg`} /></figure>
 <div className="card-body  text-blue-800">
   <h2 className="card-title  text-2xl"><span className='font-bold text-black'>Name:</span>arts </h2>

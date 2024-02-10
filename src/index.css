@@ -38,6 +38,7 @@ transition:all 1.1s ;
 }
 
 
+
 .class-card-bg{
   background: linear-gradient(#8562d7, #9dd357,#bbd247,#7ac7e3,#2a1da4);
 
@@ -46,10 +47,15 @@ transition:all 1.1s ;
   background: linear-gradient(#a68be7, #9dd357,#bbd247,#7ac7e3,#e85bc7);
 
 }
-
+/* Footer style */
 .footer-bg{
   background: linear-gradient( #9dd357,#7aef8c,#56ce54);
 
+}
+.Footer-c{
+  /* border-radius: 10px; */
+  
+  border-top-right-radius: 500px;
 }
 .nav-bg{
   background: linear-gradient( #82bb37,#87bb8c);
@@ -64,4 +70,7 @@ transition:all 1.1s ;
   background: linear-gradient(#8562d7, #9dd357,#bbd247,#7ac7e3,#2a1da4);
   
 }
-
+/* log in page button bg */
+.Login-bg{
+  background: linear-gradient( #9dd357,#7aef8c,#56ce54);
+}

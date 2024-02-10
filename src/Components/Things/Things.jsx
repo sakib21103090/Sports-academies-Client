@@ -7,7 +7,7 @@ const Things = () => {
     return (
         <div className='mb-12'>
         <div>
-            <h2 className='text-primary-color  font-bold text-4xl text-center mb-6 mt-12'>Services You Get</h2>
+            <h2 className='text-primary-color  font-bold text-4xl text-center mt-12'>Services You Get</h2>
         </div>
 
         <div className='grid max-w-screen-lg mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-10 '>

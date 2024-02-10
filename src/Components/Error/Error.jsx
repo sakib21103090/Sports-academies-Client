@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 const Error = () => {
     return (
-        <div className="hero min-h-screen bg-blue-200">
+        <div className="hero min-h-screen bg-lime-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
     <TransitionGroup>

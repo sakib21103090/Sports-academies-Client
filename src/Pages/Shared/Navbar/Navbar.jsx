@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Components/Providers/AuthProviders';
+import { RxDropdownMenu } from "react-icons/rx";
 
 
 const Navbar = () => {
@@ -33,18 +34,19 @@ const Navbar = () => {
         <div  className="navbar  fixed z-10 bg-opacity-30 max-w-screen-2xl mx-auto nav-bg  text-white">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn bg-blue-100 lg:hidden"> {/* button for mobile screen */}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <label tabIndex={0} className=" text-3xl text-black lg:hidden"> {/* button for mobile screen */}
+              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> */}
+               <RxDropdownMenu></RxDropdownMenu>
             </label>
-            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 text-white shadow font-bold bg-red-200 z-10 bg-opacity-80 rounded-box w-52"> {/* mobile screen navbar routes */}
-            <li><NavLink className='text-black mb-2 font-bold' to="/">Home</NavLink> </li>
-            <li><NavLink className='text-black mb-2 font-bold' to="/classes">Classes</NavLink> </li>
-            <li><NavLink className='text-black mb-2 font-bold' to="/instructors">Instructors</NavLink> </li>
+            <ul tabIndex={0} className="menu menu-compact dropdown-content  p-2 text-white shadow font-bold  bg-lime-700 z-10 bg-opacity-80 rounded-box w-52"> {/* mobile screen navbar routes */}
+            <li><NavLink className='mb-2  font-bold' to="/">Home</NavLink> </li>
+            <li><NavLink className=' mb-2 font-bold' to="/classes">Classes</NavLink> </li>
+            <li><NavLink className=' mb-2 font-bold' to="/instructors">Instructors</NavLink> </li>
            
             <div className=" navbar-end">
-            {user&& <li><NavLink className='text-black font-bold' to="/dashboard">Dashboard</NavLink> </li>}
+            {user&& <li><NavLink className=' font-bold' to="/dashboard">Dashboard</NavLink> </li>}
           
-            {user ? <button onClick={handleLogOut} className="btn btn-sm btn-outline bg-gray-400 ">Log Out</button>:<Link to="/login" className="btn btn-sm  h-[40px]  bg-gray-400 md:mx-4">Login</Link> }
+            
             
         </div>
               

@@ -6,6 +6,7 @@ import UseInstructor from '../../Components/Hooks/UseInstructor';
 import UseCart from '../../Components/Hooks/UseCart';
 import { GiTeacher } from "react-icons/gi";
 import { SiGoogleclassroom } from "react-icons/si";
+import { Helmet } from 'react-helmet';
 
 
 const Dashboard = () => {
@@ -14,12 +15,15 @@ const Dashboard = () => {
   const[cart]=UseCart();
  console.log(cart)
     return (
-      
+      <div>
+        <Helmet>
+           <title>Sports-Academies | Dashboard</title>
+         </Helmet>
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content flex field-bg flex-col   items-start  ">
     {/* Page content here */}
-    <label htmlFor="my-drawer-2" className="btn card-bg mb-4 mt-2 bg-lime-300 bg-transparent drawer-button lg:hidden">Open drawer</label>
+    <label htmlFor="my-drawer-2" className="btn card-bg mb-4 mt-2  bg-lime-300  drawer-button lg:hidden">Open drawer</label>
  <Outlet></Outlet>
   </div> 
   <div className="drawer-side">
@@ -63,6 +67,7 @@ const Dashboard = () => {
             <li><NavLink className='text-black w-44  font-bold' to="/classes">Classes</NavLink> </li>
     </ul>
   
+  </div>
   </div>
   </div>
 

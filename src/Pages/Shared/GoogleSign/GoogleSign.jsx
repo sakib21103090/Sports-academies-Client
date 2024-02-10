@@ -29,8 +29,8 @@ const GoogleSign = () => {
     
    
     return (
-        <div className='mb-4'>  
-               <button onClick={handleGoogleSignIn} className="btn gap-2 w-[300px] bg-blue-600 text-black mb-4"  ><FaGoogle></FaGoogle>Google</button>
+        <div>  
+               <button onClick={handleGoogleSignIn} className="btn gap-2 w-[300px] Login-bg text-black mb-4"  ><FaGoogle></FaGoogle>Google</button>
                 
    </div>
     );
